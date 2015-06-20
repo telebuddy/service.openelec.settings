@@ -205,7 +205,7 @@ class connmanService(object):
                             'value': '',
                             'type': 'ip',
                             'dbus': 'String',
-                            'action': 'set_value',
+                            'action': 'set_value_checkdhcp',
                             },
                         '1': {
                             'order': 2,
@@ -213,7 +213,7 @@ class connmanService(object):
                             'value': '',
                             'type': 'ip',
                             'dbus': 'String',
-                            'action': 'set_value',
+                            'action': 'set_value_checkdhcp',
                             },
                         '2': {
                             'order': 3,
@@ -221,7 +221,7 @@ class connmanService(object):
                             'value': '',
                             'type': 'ip',
                             'dbus': 'String',
-                            'action': 'set_value',
+                            'action': 'set_value_checkdhcp',
                             },
                         },
                     },
@@ -236,7 +236,7 @@ class connmanService(object):
                             'value': '',
                             'type': 'text',
                             'dbus': 'String',
-                            'action': 'set_value',
+                            'action': 'set_value_checkdhcp',
                             },
                         '1': {
                             'order': 2,
@@ -244,7 +244,7 @@ class connmanService(object):
                             'value': '',
                             'type': 'text',
                             'dbus': 'String',
-                            'action': 'set_value',
+                            'action': 'set_value_checkdhcp',
                             },
                         '2': {
                             'order': 3,
@@ -252,7 +252,7 @@ class connmanService(object):
                             'value': '',
                             'type': 'text',
                             'dbus': 'String',
-                            'action': 'set_value',
+                            'action': 'set_value_checkdhcp',
                             },
                         },
                     },
@@ -267,7 +267,7 @@ class connmanService(object):
                             'value': '',
                             'type': 'text',
                             'dbus': 'String',
-                            'action': 'set_value',
+                            'action': 'set_value_checkdhcp',
                             },
                         '1': {
                             'order': 2,
@@ -275,7 +275,7 @@ class connmanService(object):
                             'value': '',
                             'type': 'text',
                             'dbus': 'String',
-                            'action': 'set_value',
+                            'action': 'set_value_checkdhcp',
                             },
                         '2': {
                             'order': 3,
@@ -283,7 +283,7 @@ class connmanService(object):
                             'value': '',
                             'type': 'text',
                             'dbus': 'String',
-                            'action': 'set_value',
+                            'action': 'set_value_checkdhcp',
                             },
                         },
                     },
@@ -362,6 +362,19 @@ class connmanService(object):
         except Exception, e:
             self.oe.dbg_log('connmanService::menu_loader', 'ERROR: (' + repr(e) + ')', 4)
 
+    def set_value_checkdhcp(self, listItem):
+        try:
+            if self.struct['IPv4']['settings']['Method']['value'] == 'dhcp':
+                ok_window = xbmcgui.Dialog()
+                answer = ok_window.ok('Not allowed', 'IPv4 method is set to dhcp','changing this option is not allowed')
+                return
+            self.oe.dbg_log('connmanService::set_value_checkdhcp', 'enter_function', 0)
+            self.struct[listItem.getProperty('category')]['settings'][listItem.getProperty('entry')]['value'] = listItem.getProperty('value')
+            self.struct[listItem.getProperty('category')]['settings'][listItem.getProperty('entry')]['changed'] = True
+            self.oe.dbg_log('connmanService::set_value_checkdhcp', 'exit_function', 0)
+        except Exception, e:
+            self.oe.dbg_log('connmanService::set_value_checkdhcp', 'ERROR: (' + repr(e) + ')', 4)
+
     def set_value(self, listItem):
         try:
             self.oe.dbg_log('connmanService::set_value', 'enter_function', 0)
@@ -407,20 +420,16 @@ class connmanService(object):
         try:
             self.oe.set_busy(1)
             self.oe.dbg_log('connmanService::save_network', 'enter_function', 0)
-            if 'changed' in self.struct['IPv4']['settings']['Method']:
-                if self.struct['IPv4']['settings']['Method']['value'] == 'dhcp':
-                    for setting in self.struct['Nameservers']['settings']:
-                        if not 'changed' in self.struct['Nameservers']['settings'][setting]:
-                            self.struct['Nameservers']['settings'][setting]['changed'] = True
-                            self.struct['Nameservers']['settings'][setting]['value'] = ''
-                    for setting in self.struct['Timeservers']['settings']:
-                        if not 'changed' in self.struct['Timeservers']['settings'][setting]:
-                            self.struct['Timeservers']['settings'][setting]['changed'] = True
-                            self.struct['Timeservers']['settings'][setting]['value'] = ''
-                    for setting in self.struct['Domains']['settings']:
-                        if not 'changed' in self.struct['Domains']['settings'][setting]:
-                            self.struct['Domains']['settings'][setting]['changed'] = True
-                            self.struct['Domains']['settings'][setting]['value'] = ''
+            if self.struct['IPv4']['settings']['Method']['value'] == 'dhcp':
+                for setting in self.struct['Nameservers']['settings']:
+                    self.struct['Nameservers']['settings'][setting]['changed'] = True
+                    self.struct['Nameservers']['settings'][setting]['value'] = ''
+                for setting in self.struct['Timeservers']['settings']:
+                    self.struct['Timeservers']['settings'][setting]['changed'] = True
+                    self.struct['Timeservers']['settings'][setting]['value'] = ''
+                for setting in self.struct['Domains']['settings']:
+                    self.struct['Domains']['settings'][setting]['changed'] = True
+                    self.struct['Domains']['settings'][setting]['value'] = ''
             for category in [
                 'AutoConnect',
                 'IPv4',
@@ -777,12 +786,16 @@ class connman:
                             'action': 'refresh_network',
                             }
                         break
-            context_menu = oeWindows.contextWindow('contexMenu.xml', self.oe.__cwd__, 'Default', oeMain=self.oe)  #
-            context_menu.options = values
-            context_menu.doModal()
-            if context_menu.result != '':
-                getattr(self, context_menu.result)(listItem)
-            del context_menu
+            items = []
+            actions = []
+            for key in values.keys():
+                items.append(values[key]['text'])
+                actions.append(values[key]['action'])
+            select_window = xbmcgui.Dialog()
+            title = self.oe._(32012).encode('utf-8')
+            result = select_window.select(title, items)
+            if result >= 0:
+                getattr(self, actions[result])(listItem)
             self.oe.dbg_log('connman::open_context_menu', 'exit_function', 0)
         except Exception, e:
             self.oe.dbg_log('connman::open_context_menu', 'ERROR: (' + repr(e) + ')', 4)

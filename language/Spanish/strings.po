@@ -16,6 +16,10 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgctxt "#600"
+msgid "@DISTRONAME@ Settings"
+msgstr "Ajustes de @DISTRONAME@"
+
 msgctxt "#601"
 msgid "Interface"
 msgstr "Interfaz"
@@ -84,21 +88,9 @@ msgctxt "#705"
 msgid "Useful information like version and architecture details, support and social media links, and how to make a donation to the project"
 msgstr "Información útil como detalles de la versión y arquitectura del sistema, enlaces de soporte y redes sociales, y como hacer donaciones al proyecto"
 
-msgctxt "#706"
-msgid "706"
-msgstr "706"
-
-msgctxt "#707"
-msgid "707"
-msgstr "707"
-
-msgctxt "#708"
-msgid "708"
-msgstr "708"
-
-msgctxt "#709"
-msgid "709"
-msgstr "709"
+msgctxt "#710"
+msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
+msgstr "Configurar el nombre de tu sistema @DISTRONAME. Esto será usado para el HTPC\n\\\\hostname en Windows y el nombre de servidor SMB en el buscador Mac OS  "
 
 msgctxt "#711"
 msgid "Configure the 1st keyboard software layout"
@@ -112,21 +104,29 @@ msgctxt "#713"
 msgid "Configure the physical keyboard type"
 msgstr "Configuración del tipo de teclado físico"
 
+msgctxt "#714"
+msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgstr "@DISTRONAME@ puede ser configurado para actualizaciones automáticas o manuales. Actualizaciones automáticas están disponibles en versiones estables y candidatos a versiones estables. Actualizaciones automáticas se auto-desactivan en versiones beta y de desarrollo. "
+
 msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
 msgstr "Notificación de actualizaciones"
 
-msgctxt "#719"
-msgid "Configure the number of minutes before hard-drive spin down occurs"
-msgstr "Configure el número de minutos antes de que se detenga el disco duro"
+msgctxt "#716"
+msgid "Click to manually check the @DISTRONAME@ servers for an updated release"
+msgstr "Pulsar para comprobar manualmente los servidores de @DISTRONAME@ en busca una versión actualizada"
+
+msgctxt "#717"
+msgid "If you have an small LCD or VFD attached to your @DISTRONAME@ system you must configure the correct display driver"
+msgstr "Si tiene un pequeño LCD o VFD conectado a su sistema de @DISTRONAME@ deberás configurar el driver del display adecuado"
 
 msgctxt "#720"
 msgid "Set to ON and Bluetooth devices will be disabled during power-saving modes"
 msgstr "Desactivar dispositivos Bluetooth durante el modo ahorro de energía"
 
-msgctxt "#721"
-msgid "721"
-msgstr "721"
+msgctxt "#722"
+msgid "Create a tar archive containing all @DISTRONAME@ and Kodi configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
+msgstr "Crear un archivo tar conteniendo todos los ajustes de configuración de @DISTRONAME@ y Kodi con sus bases de datos y miniaturas. Los archivos respaldados se guardarán en /storage/backups"
 
 msgctxt "#723"
 msgid "Restore a tar archive backup previously created using the backup option above"
@@ -151,10 +151,6 @@ msgstr "Configurar la Palabra Clave del Punto de Acceso"
 msgctxt "#730"
 msgid "Enable or disable support for Wired (Ethernet) networks"
 msgstr "Activar o desactivar el soporte para redes por cable (Ethernet)"
-
-msgctxt "#731"
-msgid "Configure OpenVPN and PPTP VPN connections"
-msgstr "Configurar las conexiones OpenVPN y PPTP VPN"
 
 msgctxt "#732"
 msgid "Configure the 1st time (NTP) server"
@@ -192,6 +188,10 @@ msgctxt "#741"
 msgid "Set the password for Samba sharing"
 msgstr "Contraseña Samba"
 
+msgctxt "#742"
+msgid "Set to ON to enable the embedded SSH server. The SSH console can be accessed with username 'root' and password '@ROOT_PASSWORD@'."
+msgstr "Poner en ON para habilitar el servidor SSH incorporado. La consola de SSH será accesible con usuario \"root\" y contraseña '@ROOT_PASSWORD@'."
+
 msgctxt "#743"
 msgid "Set to ON if you have copied private SSH keys to your HTPC and would like to improve security by disabling SSH username and password authentication."
 msgstr "Active la opción si ha copiado su clave privada SSH a su HTPC y quisiera mejorar la seguridad deshabilitando la autenticación SSH de usuario/contraseña."
@@ -204,25 +204,13 @@ msgctxt "#745"
 msgid "Set to ON to enable the cron daemon"
 msgstr "Active la opción habilitar el demonio cron"
 
-msgctxt "#746"
-msgid "Set to ON to send system event logs (/var/log/messages) to a remote Syslog server"
-msgstr "Active la opción para enviar los registros de eventos del sistema (/var/log/messages) a un servidor Syslog remoto"
-
-msgctxt "#747"
-msgid "Configure the IP address of the remote Syslog server"
-msgstr "Configura la dirección IP del servidor remoto Syslog"
-
-msgctxt "#748"
-msgid "748"
-msgstr "748"
-
-msgctxt "#749"
-msgid "749"
-msgstr "749"
-
 msgctxt "#750"
 msgid "750"
 msgstr "750"
+
+msgctxt "#751"
+msgid "With OBEX filetransfer you can send files, for example movies or pictures over bluetooth to @DISTRONAME@."
+msgstr "Con \"OBEX filetransfer\" se pueden enviar archivos, por ej. fotos o películas, a @DISTRONAME@ mediante bluetooth"
 
 msgctxt "#752"
 msgid "Here you can set the folder location where OBEX file transfer should store incoming files"
@@ -240,10 +228,6 @@ msgctxt "#755"
 msgid "Auto share external drives / partitions"
 msgstr "Auto compartir unidades / particiones externas"
 
-msgctxt "#32000"
-msgid "Network"
-msgstr "Red"
-
 msgctxt "#32001"
 msgid "Services"
 msgstr "Servicios"
@@ -255,18 +239,6 @@ msgstr "Sistema"
 msgctxt "#32003"
 msgid "Interface"
 msgstr "Interfase"
-
-msgctxt "#32004"
-msgid "IP Address"
-msgstr "Dirección IP"
-
-msgctxt "#32005"
-msgid "Type"
-msgstr "Tipo"
-
-msgctxt "#32006"
-msgid "State"
-msgstr "Estado"
 
 msgctxt "#32007"
 msgid "Driver"
@@ -285,8 +257,8 @@ msgid "Keyboard Layout"
 msgstr "Disposición de teclas"
 
 msgctxt "#32012"
-msgid "Sleep hard drive after (minutes)"
-msgstr "Poner el disco duro en suspensión después de... (en minutos)"
+msgid "Select Action"
+msgstr "Seleccionar acción"
 
 msgctxt "#32013"
 msgid "Updates"
@@ -311,10 +283,6 @@ msgstr "Redes Inalámbricas"
 msgctxt "#32103"
 msgid "Wired Networks"
 msgstr "Redes Cableadas"
-
-msgctxt "#32104"
-msgid "VPN"
-msgstr "VPN"
 
 msgctxt "#32105"
 msgid "Active"
@@ -420,42 +388,6 @@ msgctxt "#32130"
 msgid "Domain #3"
 msgstr "Dominio #3"
 
-msgctxt "#32131"
-msgid "VPN Type"
-msgstr "Tipo de VPN"
-
-msgctxt "#32132"
-msgid "Network Name"
-msgstr "Nombre de Red"
-
-msgctxt "#32133"
-msgid "VPN Server"
-msgstr "Servidor VPN"
-
-msgctxt "#32134"
-msgid "VPN DNS Domain"
-msgstr "Dominio DNS de VPN"
-
-msgctxt "#32135"
-msgid "VPN Cookie"
-msgstr "Cookie de VPN"
-
-msgctxt "#32136"
-msgid "Server Certificate"
-msgstr "Certificado del Servidor"
-
-msgctxt "#32137"
-msgid "Certificate Autority Certificate"
-msgstr "Autoridad de Certificados Certificada"
-
-msgctxt "#32138"
-msgid "Certificate"
-msgstr "Certificado"
-
-msgctxt "#32139"
-msgid "Key"
-msgstr "Clave"
-
 msgctxt "#32140"
 msgid "Save"
 msgstr "Guardar"
@@ -476,10 +408,6 @@ msgctxt "#32144"
 msgid "Connect"
 msgstr "Conectar"
 
-msgctxt "#32145"
-msgid "Unable to connect"
-msgstr "Imposible conectar"
-
 msgctxt "#32146"
 msgid "Hidden Network Name"
 msgstr "Nombre de Red Oculto"
@@ -492,129 +420,13 @@ msgctxt "#32148"
 msgid "Wireless Network Username"
 msgstr "Nombre de Usuario de Red Inalámbrica"
 
-msgctxt "#32149"
-msgid "Add VPN"
-msgstr "Agregar VPN"
-
 msgctxt "#32150"
 msgid "Edit"
 msgstr "- Editar"
 
-msgctxt "#32151"
-msgid "Refuse EAP"
-msgstr "Rechazar EAP"
-
-msgctxt "#32152"
-msgid "Refuse PAP"
-msgstr "Rechazar PAP"
-
-msgctxt "#32153"
-msgid "Refuse CHAP"
-msgstr "Rechazar CHAP"
-
-msgctxt "#32154"
-msgid "Refuse MS-CHAP"
-msgstr "Rechazar MS-CHAP"
-
-msgctxt "#32155"
-msgid "Refuse MS-CHAP v2"
-msgstr "Rechazar MS-CHAP v2"
-
-msgctxt "#32156"
-msgid "Require MPPE"
-msgstr "Requiere MPPE"
-
-msgctxt "#32157"
-msgid "Require MPPE (40 bit)"
-msgstr "Requerir MPPE (40 bit)"
-
-msgctxt "#32158"
-msgid "Require MPPE (128 bit)"
-msgstr "Requerir MPPE (128 bit)"
-
-msgctxt "#32159"
-msgid "Require Stateful MPPE"
-msgstr "Requerir MPPE con Estado"
-
-msgctxt "#32160"
-msgid "Disable BSD Compression"
-msgstr "Deshabilitar Compresión BSD"
-
-msgctxt "#32161"
-msgid "Disable VJ Compression"
-msgstr "Deshabilitar Compresión VJ"
-
-msgctxt "#32162"
-msgid "LCP Echo Failure"
-msgstr "Falla de Eco LCP"
-
-msgctxt "#32163"
-msgid "LCP Echo Interval"
-msgstr "Intervalo de Eco LCP"
-
-msgctxt "#32164"
-msgid "Disable Deflate Compression"
-msgstr "Deshabilitar Compresión 'Deflate'"
-
-msgctxt "#32165"
-msgid "MTU"
-msgstr "MTU"
-
-msgctxt "#32166"
-msgid "NSCertType"
-msgstr "NSCertType"
-
-msgctxt "#32167"
-msgid "Proto"
-msgstr "Proto"
-
-msgctxt "#32168"
-msgid "Port"
-msgstr "Puerto"
-
-msgctxt "#32169"
-msgid "AuthUserPass"
-msgstr "AuthUserPass"
-
-msgctxt "#32170"
-msgid "AskPass"
-msgstr "AskPass"
-
-msgctxt "#32171"
-msgid "AuthNoCache"
-msgstr "AuthNoCache"
-
-msgctxt "#32172"
-msgid "TLSRemote"
-msgstr "TLSRemote"
-
-msgctxt "#32173"
-msgid "TLSAuth"
-msgstr "TLSAuth"
-
-msgctxt "#32174"
-msgid "TLSAuthDir"
-msgstr "TLSAuthDir"
-
-msgctxt "#32175"
-msgid "Auth"
-msgstr "Auth"
-
-msgctxt "#32176"
-msgid "CompLZO"
-msgstr "CompLZO"
-
-msgctxt "#32177"
-msgid "RemoteCertTls"
-msgstr "RemoteCertTls"
-
-msgctxt "#32178"
-msgid "ConfigFile"
-msgstr "Archivo de configuración"
-
-msgctxt "#32179"
-msgid "Update Available"
-msgstr "Actualización Disponible"
+msgctxt "#32180"
+msgid "Would you like to update @DISTRONAME@ now?"
+msgstr "¿Desea actualizar @DISTRONAME@ ahora?"
 
 msgctxt "#32181"
 msgid "Filename"
@@ -656,41 +468,13 @@ msgctxt "#32190"
 msgid "System Name"
 msgstr "Nombre del Sistema"
 
-msgctxt "#32191"
-msgid "Error"
-msgstr "Error"
-
-msgctxt "#32192"
-msgid "Unable to connect to Network"
-msgstr "Imposible conectar a la Red"
-
-msgctxt "#32193"
-msgid "Service"
-msgstr "Servicio"
-
-msgctxt "#32194"
-msgid "Restart Networking"
-msgstr "Reiniciar Redes"
-
-msgctxt "#32195"
-msgid "Support"
-msgstr "Seleccionar Fondo Personalizado"
-
 msgctxt "#32196"
 msgid "About"
 msgstr "Acerca de"
 
-msgctxt "#32197"
-msgid "Update now"
-msgstr "Actualizar ahora"
-
 msgctxt "#32198"
 msgid "SSID"
 msgstr "SSID"
-
-msgctxt "#32199"
-msgid "If you would like to contribute to the OpenELEC project you can make a donation using [CR]PayPal, Flattr or Bitcoin. Donating is easy and takes only a few minutes."
-msgstr "Si desea contribuir con el proyecto OpenELEC puede hacer una donación por medio de [CR]PayPal, Flattr o Bitcoin. Donar es sencillo y solo demora unos pocos minutos."
 
 msgctxt "#32200"
 msgid "Samba"
@@ -728,37 +512,17 @@ msgctxt "#32208"
 msgid "Hidden Wlan"
 msgstr "Wlan Oculta"
 
-msgctxt "#32209"
-msgid "Proxy Server"
-msgstr "Servidor Proxy"
-
-msgctxt "#32210"
-msgid "Auto Proxy URL"
-msgstr "URL de Proxy Automático"
-
-msgctxt "#32211"
-msgid "Proxy Servers"
-msgstr "Servidores Proxy"
-
 msgctxt "#32212"
 msgid "Cancel"
 msgstr "Cancelar"
 
-msgctxt "#32213"
-msgid "Exit"
-msgstr "Salir"
-
-msgctxt "#32214"
-msgid "Upload Logfiles"
-msgstr "Subir registros"
-
-msgctxt "#32215"
-msgid "Invalid Email Address"
-msgstr "Dirección de Correo Electrónico Inválida"
-
 msgctxt "#32216"
 msgid "Auto-Share External Drives"
 msgstr "Auto compartir unidades externas"
+
+msgctxt "#32300"
+msgid "Welcome to @DISTRONAME@"
+msgstr "Bienvenido a @DISTRONAME@"
 
 msgctxt "#32301"
 msgid "Welcome"
@@ -768,13 +532,17 @@ msgctxt "#32303"
 msgid "Next"
 msgstr "Siguiente"
 
+msgctxt "#32304"
+msgid "To be identified easily on the network, your new @DISTRONAME@ machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
+msgstr "Para ser facilmente identificable en la red doméstica, su nuevo equipo @DISTRONAME@ necesita un nombre.[CR][CR]\nElija algo significativo - como la habitación donde se encuentre - con el fin de saber de que se trata cuando aparezca en la red.[CR][CR]\nEste nombre se usa cuando se configuran los servicios de red, como la compartición de archivos con samba."
+
 msgctxt "#32305"
 msgid "Networking"
 msgstr "Redes"
 
-msgctxt "#32307"
-msgid "Select your Regional Settings:"
-msgstr "Selecciona tus ajustes regionales"
+msgctxt "#32306"
+msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, @DISTRONAME@ needs to be connected the Internet.[CR][CR]An Internet connection is also required for @DISTRONAME@ to automatically update itself."
+msgstr "Para descargar contextos, rótulos y vistas en miniatura para tus películas y  programas de TV y para el contenido en linea de sitios como YouTube, @DISTRONAME@ necesita estar conectado a Internet.[CR][CR]Una conexión a Internet también es requerida para que @DISTRONAME@ se actualice automáticamente por si mismo.  "
 
 msgctxt "#32308"
 msgid "Hostname:"
@@ -784,21 +552,17 @@ msgctxt "#32309"
 msgid "The following Networks are currently available:"
 msgstr "Las siguientes redes están disponibles"
 
-msgctxt "#32310"
-msgid "Keyboard:"
-msgstr "Teclado"
-
 msgctxt "#32311"
 msgid "Sharing and Remote Access"
 msgstr "Conpartir y acceso remoto"
 
-msgctxt "#32314"
-msgid "enabled"
-msgstr "Activado"
+msgctxt "#32312"
+msgid "@DISTRONAME@ also supports SSH for remote access. This is for advanced users who wish to interact with @DISTRONAME@'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
+msgstr "@DISTRONAME@ también soporta el acceso remoto mediante SSH. Esto es para usuarios avanzados que desean interactuar con el sistema operativo que está debajo. El usuario por defecto es [COLOR blue]root[/COLOR] con contraseña [COLOR blue]@ROOT_PASSWORD@[/COLOR]."
 
-msgctxt "#32315"
-msgid "disabled"
-msgstr "Deshabilitado"
+msgctxt "#32313"
+msgid "In order to share your files between your computers @DISTRONAME@ has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
+msgstr "Con el fin de compartir sus archivos entre equipos @DISTRONAME@ ha incorporado un servidor samba. Este servidor se puede integrar en la red local accediendo a el de un modo familiar con \"Finder o Windows Explorer\""
 
 msgctxt "#32316"
 msgid "Configure Services:"
@@ -808,6 +572,10 @@ msgctxt "#32317"
 msgid "Thank you"
 msgstr "Gracias"
 
+msgctxt "#32318"
+msgid "Your @DISTRONAME@ installation is now complete and you'll now enter Kodi when you can set up your media libraries. For help with this, there is a guide available at wiki.kodi.tv[CR][CR]@DISTRONAME@ is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find @DISTRONAME@ useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using @DISTRONAME@ as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at our website"
+msgstr "Su instalación @DISTRONAME@ esta completa ahora y entrarás a Kodi cuando usted configure sus bibliotecas de medios. Para asistencia con esto, Hay una guía disponible en wiki.kodi.tv[CR][CR]@DISTRONAME@ está desarrollado por un equipo dedicado de desarrolladores quienes meramente trabajan en sus tiempos libres. Como voluntarios del  proyecto, Tenemos que pagar por nuestros servicios de Internet y recursos de desarrollo por lo que si tú lo encuentras útil @DISTRONAME@, Nosotros siempre apreciaremos una donación de cualquier cantidad.[CR][CR]Finalmente, Esperamos que disfrutes usando @DISTRONAME@ tanto como nosotros hemos disfrutado creándolo. Si  necesitas más ayuda, Puedes encontrar enlaces para obtener ayuda con las noticias más recientes en nuestro sitio web."
+
 msgctxt "#32319"
 msgid "Cron"
 msgstr "Cron"
@@ -816,14 +584,6 @@ msgctxt "#32320"
 msgid "Enable Cron"
 msgstr "Activar Cron"
 
-msgctxt "#32321"
-msgid "Virtual Private Networks"
-msgstr "VPN"
-
-msgctxt "#32322"
-msgid "Add new VPN configuration"
-msgstr "Añadir VPN"
-
 msgctxt "#32323"
 msgid "Reset to Defaults"
 msgstr "Restaurar valores por defecto"
@@ -831,6 +591,10 @@ msgstr "Restaurar valores por defecto"
 msgctxt "#32324"
 msgid "Reset System Settings to defaults"
 msgstr "Restaurar los ajustes de sistema por defecto"
+
+msgctxt "#32325"
+msgid "Reset @DISTRONAME@ to defaults"
+msgstr "Restaurar @DISTRONAME@ a valores por defecto"
 
 msgctxt "#32326"
 msgid "Are you sure?"
@@ -852,10 +616,6 @@ msgctxt "#32331"
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-msgctxt "#32332"
-msgid "Address"
-msgstr "Dirección"
-
 msgctxt "#32333"
 msgid "Connected: "
 msgstr "Conectado"
@@ -868,14 +628,6 @@ msgctxt "#32335"
 msgid "No"
 msgstr "No"
 
-msgctxt "#32336"
-msgid "Start Discovery"
-msgstr "Comenzar búsqueda"
-
-msgctxt "#32337"
-msgid "Stop Discovery"
-msgstr "Detener la búqueda"
-
 msgctxt "#32338"
 msgid "No Bluetooth adapter found."
 msgstr "No se ha encontrado ningún adaptador Bluetooth"
@@ -883,18 +635,6 @@ msgstr "No se ha encontrado ningún adaptador Bluetooth"
 msgctxt "#32339"
 msgid "No Bluetooth device found. Please put your Bluetooth device into discovery mode[CR]and start the scan"
 msgstr "No se ha encontrado un dispositivo Bluetooth. Por favor coloque su dispositivo Bluetooth en modo visible [CR] y comience la búsqueda."
-
-msgctxt "#32340"
-msgid "Syslog"
-msgstr "Registro de sistema"
-
-msgctxt "#32341"
-msgid "Enable Remote Syslog Server"
-msgstr "Usar servidor syslog (registro de sistema) remoto"
-
-msgctxt "#32342"
-msgid "Syslog Server IP Address"
-msgstr "Dirección del servidor syslog"
 
 msgctxt "#32343"
 msgid "Enter the following Key on your Device."
@@ -904,10 +644,6 @@ msgctxt "#32344"
 msgid "Enable Bluetooth"
 msgstr "Habilitar Bluetooth"
 
-msgctxt "#32345"
-msgid "Bluetooth daemon is not running!"
-msgstr "Modulo Bluetooth no activo"
-
 msgctxt "#32346"
 msgid "Bluetooth is disabled"
 msgstr "Bluetooth desactivado"
@@ -916,21 +652,13 @@ msgctxt "#32358"
 msgid "Trust and Connect"
 msgstr "Confiar y conectarse"
 
-msgctxt "#32359"
-msgid "Support"
-msgstr "Seleccionar Fondo Personalizado"
-
-msgctxt "#32360"
-msgid "Please enter your email address"
-msgstr "Por favor introduce tu email"
-
-msgctxt "#32361"
-msgid "The following Informations are Invalid:"
-msgstr "Las siguientes informaciones son inválidas"
-
 msgctxt "#32362"
 msgid "Check for updates now:"
 msgstr "Comprobar actualizaciones"
+
+msgctxt "#32363"
+msgid "@DISTRONAME@"
+msgstr "@DISTRONAME@"
 
 msgctxt "#32364"
 msgid "Update available"
@@ -975,18 +703,6 @@ msgstr "Restaurar copia de seguridad"
 msgctxt "#32375"
 msgid "Backup Progress"
 msgstr "Progreso de copia de seguridad"
-
-msgctxt "#32376"
-msgid "Select a backup destination directory"
-msgstr "Selecciona el destino de la copia de seguridad"
-
-msgctxt "#32377"
-msgid "Select the backup file to restore"
-msgstr "Selecciona el archivo de copia de seguridad a restaurar"
-
-msgctxt "#32378"
-msgid "The information you entered is incomplete"
-msgstr "La información introducida está incompleta"
 
 msgctxt "#32379"
 msgid "There is not enough free storage space to continue!"
